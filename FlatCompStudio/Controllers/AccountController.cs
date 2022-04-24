@@ -42,7 +42,7 @@ namespace FlatCompStudio.Controllers
                     Name = "Admin",
                     //img = System.IO.File.ReadAllBytes(Server.MapPath("~/images/team/admin.png"))
                 };
-                if (usermngr.Create(adminuser, "l0velornH*").Succeeded)
+                if (usermngr.Create(adminuser, "123456789Oo*").Succeeded)
                 {
                     var token = usermngr.GenerateEmailConfirmationToken(adminuser.Id);
                     usermngr.ConfirmEmail(adminuser.Id, token);
