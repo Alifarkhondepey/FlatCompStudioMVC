@@ -1,0 +1,59 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+@using IdentitySample.Models
+@model LoginViewModel
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+</head>
+<body class="text-center">
+    <h1>Login</h1>
+    <hr />
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-12">
+
+
+                <form action="/Account/LoginConfirm">
+                    <div class="col-sm-12">
+                        <label>UserName</label>
+                        <div class="form-group">
+                            @Html.TextBoxFor(x => x.Email)
+                            <div>
+                                @Html.ValidationMessageFor(x => x.Email)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+
+                        <label>Password</label>
+                        <div class="form-group">
+                            @Html.PasswordFor(x => x.Password)
+                            <div>
+                                @Html.ValidationMessageFor(x => x.Password)
+                            </div>
+
+                        </div>
+                        <button>Login</button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/jquery.validate-vsdoc.js"></script>
+</body>
+</html>
